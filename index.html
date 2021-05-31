@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "https://fonts.googleapis.com/css?family=Lato" rel="styleheet">
+    <link rel="stylesheet" href="style.css">
+    <title>John Robison's Personal Website</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+          <div class="left-side">
+            <div class="nav-link-wrapper active-nav-link">
+              <a href="index.html">Home</a>
+            </div>
+    
+            <div class="nav-link-wrapper">
+              <a href="about.html">About</a>
+            </div>
+          </div>
+
+        <div class="right-side">
+            <div class="brand">
+              <div>JOHN ROBISON</div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="portfolio-items-wrapper">
+            <div class="portfolio-item-wrapper">
+                <div class="portfolio-img-background" style="background-image:url(images/arminius.jpg)"></div>
+                <div class="img-text-wrapper">
+                    <div class="subtitle" id="german">
+                        German Film — Barbaren
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+                <div class="portfolio-img-background" style="background-image:url(images/darth-vader-2.jpg)"></div>
+                <div class="img-text-wrapper">
+                    <div class="subtitle" id="star-wars">
+                        Science Fiction — Star Wars
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+                <div class="portfolio-img-background" style="background-image:url(images/peppermint-candy.jpg)"></div>
+                <div class="img-text-wrapper">
+                    <div class="subtitle" id="east-asian">
+                        East Asian Film — Peppermint Candy
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+                <div class="portfolio-img-background" style="background-image:url(images/dune-2.jpg)"></div>
+                <div class="img-text-wrapper">
+                    <div class="subtitle" id="dune">
+                        Dune, by Frank Herbert
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+                <div class="portfolio-img-background" style="background-image:url(images/crypto.jpg)"></div>
+                <div class="img-text-wrapper">
+                    <div class="subtitle" id="crypto">
+                        Cryptonomicon, by Neal Stephenson
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+                <div class="portfolio-img-background" style="background-image:url(images/foundation.jpg)"></div>
+                <div class="img-text-wrapper">
+                    <div class="subtitle" id="foundation">
+                        The Foundation Trilogy, by Isaac Asimov
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+                <div class="portfolio-img-background" style="background-image:url(images/martian-chronicles.jpg)"></div>
+                <div class="img-text-wrapper">
+                    <div class="subtitle" id="martian">
+                        Tha Martian Chronicles, by Ray Bradbury
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+                <div class="portfolio-img-background" style="background-image:url(images/misbehaving.jpg)"></div>
+                <div class="img-text-wrapper">
+                    <div class="subtitle" id="econ">
+                        Behavioral Economics
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+                <div class="portfolio-img-background" style="background-image:url(images/machine-learning.jpg)"></div>
+                <div class="img-text-wrapper">
+                    <div class="subtitle" id="machine-learning">
+                        Machine Learning
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+                <div class="portfolio-img-background" style="background-image:url(images/blockchain-security.jpg)"></div>
+                <div class="img-text-wrapper">
+                    <div class="subtitle" id="blockchain">
+                        Blockchain
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+                <div class="portfolio-img-background" style="background-image:url(images/cryptography.jpg)"></div>
+                <div class="img-text-wrapper">
+                    <div class="subtitle" id="math">
+                        Mathematics and Cryptography
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item-wrapper">
+                <div class="portfolio-img-background" style="background-image:url(images/nasa.png)"></div>
+                <div class="img-text-wrapper">
+                    <div class="subtitle" id="nasa">
+                        NASA
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script>
+    //Find all objects on the page that match this particular query
+    const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+    //portflioItems is now an array containing each of these objects
+
+    // forEach() function runs over each of these portfolioItems objects
+    // adds an event listener that is triggered by a 'mouseover' event
+    // select the class list from each div and darken each image as you slide over it
+    // remove this filter as your mouse leaves the selected object
+    portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+</script>
+</html>
