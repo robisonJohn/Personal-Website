@@ -1,0 +1,160 @@
+
+body {
+    margin: 0px;
+    background-color: aquamarine;
+}
+/* About Page */
+.two-column-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+img {
+    width: 375px;
+    height: 500px;
+    padding: 30px;
+}
+h1 {
+    color: crimson;
+    font-family: 'Poiret One', Helvetica, sans-serif;
+    font-weight: 600;
+
+}
+p {
+    font-family: 'Poiret One', Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 30px;
+}
+a {
+    font-size: 20px;
+    padding: 30px;
+}
+
+/*This enables us to divide our webite page into fractional units*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+    
+  }
+
+.left-side {
+    display: flex;
+}
+
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+ .nav-link-wrapper:hover {
+     border-bottom: 1px solid black;
+ }
+ .nav-link-wrapper a:hover {
+    color: black;
+}
+
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+}
+
+.portfolio-img-background {
+    height: 500px;
+    width: 350px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    margin: 30px;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+    padding-right: 140px;
+    padding-left: 100px;
+      
+}
+.img-text-wrapper .subtitle {
+    transition: 1s;
+    color: transparent;
+    font-weight: 600;
+}
+
+.img-text-wrapper:hover .subtitle {
+    font-weight: 600;
+    color: lightblue;
+    font-size: 30px;
+
+}
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+.img-text-wrapper:hover #german {
+    color: lightblue;
+}
+.img-text-wrapper:hover #star-wars {
+    color: orange;
+}
+.img-text-wrapper:hover #east-asian {
+    color: lightcoral;
+}
+.img-text-wrapper:hover #dune {
+    color: rebeccapurple;
+}
+.img-text-wrapper:hover #crypto {
+    color: lightgreen;
+}
+.img-text-wrapper:hover #foundation {
+    color: turquoise;
+}
+.img-text-wrapper:hover #martian {
+    color: yellowgreen;
+}
+.img-text-wrapper:hover #econ {
+    color: blueviolet;
+}
+.img-text-wrapper:hover #machine-learning {
+    color: lightpink;
+}
+.img-text-wrapper:hover #blockchain {
+    color: lightsalmon;
+}
+.img-text-wrapper:hover #math {
+    color: yellow;
+}
+.img-text-wrapper:hover #nasa {
+    color: crimson;
+    font-size: 40px;
+    margin-bottom: 180px;
+}
+
